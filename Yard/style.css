@@ -4,6 +4,10 @@ html body{
     font-family:'Noto Sans KR'; 
     scroll-behavior: smooth;
 }
+
+#load{width:100%;height:100%;top:0;left:0;position:fixed;display:block;opacity:1;background:#fff;z-index:299;text-align:center}
+#load>img{position:absolute;top:50%;left:50%;z-index:300}
+
 /* 네비바 */
 #header{
     width: 100%;
@@ -202,10 +206,12 @@ header #gon nav>ul>li .here {
 .top>p{
     text-align: center;
     position: absolute;
-    height: 40px;
+    /* height: 60px; */
     font-size: 40px;
+    font-weight:bold;
     color: #fff;
     z-index: 5;
+    margin-bottom:0;
 }
 
 
@@ -290,7 +296,7 @@ header #gon nav>ul>li .here {
     max-width:680px;
     width:100%;
     height:18.75vw;
-    border-radius:13px;    
+    border-radius:20px;    
     position:relative;
     overflow:hidden;  
     margin:0 auto;       
@@ -302,7 +308,7 @@ header #gon nav>ul>li .here {
     height:100%;  
     position:relative;
     border:1px solid #707070; 
-    border-radius:13px; 
+    border-radius:20px; 
     overflow:hidden;
     gap:10%;
 } 
@@ -519,28 +525,6 @@ html *{
 
 /* 태블릿 모드 */
 
-/* 1280px */
-@media screen and (max-width:1280px){
-   
-
-    .news-title{
-        font-size:35px;
-    }
-    .sub-title{
-        font-size:15px;
-    }
-      
-     /* 푸터 */
-    .footer-logo, .footer-text{
-        margin-left: 3rem;
-        margin-right: 3rem;
-    }
-    /* 푸터 문단 크기 지정 */
-    .footer-wrap .footer-left{
-        width:50%;
-    }
-    
-}
 
 /* 1024px */
 @media screen and (max-width: 1024px){
@@ -584,6 +568,23 @@ html *{
         padding-left: 2vw;
         text-align: center
     }
+    .news-title, .top>p{
+        font-size:35px;
+    }
+    .sub-title{
+        font-size:15px;
+    }
+      
+     /* 푸터 */
+    .footer-logo, .footer-text{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    /* 푸터 문단 크기 지정 */
+    .footer-wrap .footer-left{
+        width:50%;
+    }
+
     }
 
 /* 모바일 모드 */
@@ -660,6 +661,12 @@ html *{
         font-size :28px;
         line-height :42px;
     }
+    .news-title-wrap .news-title{
+       margin-bottom:0;
+    }  
+    .top>p{
+        font-size:28px;
+    }
     .sub-title{
         font-size:14px;
         line-height:26px;
@@ -700,9 +707,9 @@ html *{
 
 /* 430px */
 @media screen and (max-width:430px){
-    /*.resoft-news{
-         padding-top:10vw;       
-    }*/
+    .top>p{
+        font-size:22px;
+    }   
     .news-title{
         font-size:22px;
         line-height:33px;

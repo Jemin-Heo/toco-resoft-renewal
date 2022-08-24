@@ -6,10 +6,10 @@
 
 html body{margin:0 auto;}
 
-#load{width:100%;height:100%;top:0;left:0;position:fixed;display:block;opacity:1;background:#fff;z-index:299;text-align:center}
-#load>img{position:absolute;top:50%;left:50%;z-index:300}
 /* ==================== 헤더 ==================== */
 /* 바디 */
+#load{width:100%;height:100%;top:0;left:0;position:fixed;display:block;opacity:1;background:#fff;z-index:299;text-align:center}
+#load>img{position:absolute;top:50%;left:50%;z-index:300}
 html body{    
     margin:0 auto;
     font-family:'Noto Sans KR'; 
@@ -23,7 +23,10 @@ html body{
     z-index: 100;
     border-bottom: 1px solid #dbdbdb;
 }
-
+/* .won{
+    max-width: 1440px;
+    width: 85vw;
+} */
 header a {
     text-decoration: none;
     cursor: pointer
@@ -72,6 +75,7 @@ header #gon nav+div {
     width: 100%;
     height: 300px;
     background: rgba(24, 75, 159, .9);
+    backdrop-filter: blur(5px);
     z-index: -1
 }
 
@@ -164,6 +168,7 @@ header #gon nav>ul>li .menu {
 
 .won {
     max-width: 1440px;
+    width: 85vw;
     margin: 0 auto;
     height: 80px;
 }
@@ -212,15 +217,7 @@ header #gon nav>ul>li .here {
     font-weight: bold;
 }
 
-@media screen and (max-width: 1440px){
-header .logo {
-        margin-left: 7.5vw;
-    }
 
-    header #gon{
-        width: 85vw;
-    }
-}
     @media screen and (max-width: 1024px){
         .dpdl{
         margin-right: 0;
@@ -239,7 +236,7 @@ header .logo {
     header #gon nav>ul>li .dpdl {
         opacity: 0;
         width: 100px;
-        pointer-events: none
+        z-index:-1
     }
 
     header #gon nav>ul>li .menu {
@@ -324,8 +321,7 @@ header .logo {
     .top_back {
         height: 279px
     }
-    }
-
+}
 
 
 
@@ -344,7 +340,7 @@ header .logo {
     position: relative;
     z-index: 10;
     max-width: 1440px;
-    width: 75vw;
+    width: 85vw;
     height: 100%;
     margin: 0 auto;
     padding-top: 120px;
@@ -366,7 +362,7 @@ header .logo {
 }
 .ecoce-title p:nth-child(2){
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 400;
     line-height: 26px;
     text-align: left;
     color: #C8C8C8;
@@ -468,7 +464,7 @@ header .logo {
 #content-moado-wrap{
     position: relative;
     max-width: 1440px;
-    width: 75vw;
+    width: 85vw;
     height: 100%;
     margin: 0 auto;
     /* padding-top: 120px; */
@@ -489,7 +485,7 @@ header .logo {
 }
 .moado-title p:nth-child(2){
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 400;
     line-height: 26px;
     text-align: left;
     color: #C8C8C8;
@@ -562,7 +558,7 @@ header .logo {
     position: relative;
     z-index: -1;
     max-width: 1440px;
-    width: 75vw;
+    width: 85vw;
     height: 100%;
     margin: 0 auto;
     padding: 120px 0 120px 0;
@@ -570,8 +566,6 @@ header .logo {
     flex-direction: column;
     /* 수직 정렬 */
     justify-content: center;
-    /* 왼쪽 정렬 */
-    align-items: left;
     /* 확인 */
     flex-wrap: nowrap;
     /* border: 1px solid red; */
@@ -584,7 +578,7 @@ header .logo {
 }
 .etc-title p:nth-child(2){
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 400;
     line-height: 26px;
     text-align: left;
     color: #C8C8C8;
@@ -661,11 +655,7 @@ header .logo {
 }
 
 @media screen and (max-width:1440px) {
-    #content-ecoce{width: 85vw;}
-    #content-moado-wrap{width: 85vw;}
-    #content-etc{width: 85vw;}
     .moado-bg{height: 50vw;}
-
 }
 
 /* ---------- 1280px ---------- */
@@ -702,7 +692,6 @@ header .logo {
     }
     .mobile-ecoce .m-ecoce-title p:nth-child(2){
         font-size: 15px;
-        font-weight: bold;
         line-height: 26px;
         /* text-align: center; */
         color: #C8C8C8;
@@ -801,7 +790,6 @@ header .logo {
     }
     .mobile-moado-wrap .mobile-moado-title p:nth-child(2){
         font-size: 15px;
-        font-weight: bold;
         line-height: 26px;
         /* text-align: center; */
         color: #C8C8C8;
@@ -824,7 +812,6 @@ header .logo {
         height: 100%;
         margin: 0 auto;
         display: flex;
-        flex-direction: center;
         margin-bottom: 10%;
         gap: 2%;
         /* border: 1px solid red; */
@@ -836,7 +823,6 @@ header .logo {
         width: 40%;
         display: flex;
         flex-direction: column;
-        flex-direction: center;
         align-items: center;
         gap: 30%;
     }
